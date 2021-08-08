@@ -57,3 +57,24 @@ const calcTempAmplitudeNew = function (t1, t2) {
 
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
+
+// Coding challenge 1
+/*
+Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures
+
+Example: [17, 21, 23] will print "...17C in 1 days ... 21C in 2 days ... 23 C in 3 days..."
+
+Create a function 'printForecast' which takes in an array 'arr' and logs a string like the one above to the console.
+*/
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}˚C in ${i + 1} days ... `;
+  }
+  console.log('... ' + str);
+};
+printForecast(data1);
